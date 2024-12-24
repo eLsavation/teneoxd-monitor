@@ -1,0 +1,12 @@
+[Unit]
+Description=Teneoxd Monitoring
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/teneoxd/monitor-teneoxd.py
+WorkingDirectory=/home/teneoxd
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
