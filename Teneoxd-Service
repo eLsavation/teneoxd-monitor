@@ -1,0 +1,14 @@
+[Unit]
+Description=Teneoxd Service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 main.py
+WorkingDirectory=/home/teneoxd
+StandardOutput=append:/home/output.log
+StandardError=append:/home/output.log
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
